@@ -30,7 +30,7 @@ pipeline {
 		}
 		stage ('Run Docker'){
 			steps{
-				sh 'docker run -d -p 1542:80 ${registry}'
+				sh 'docker run -d -p 1543:80 ${registry}'
 			}
 		}
 	}
