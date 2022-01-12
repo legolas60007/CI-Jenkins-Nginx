@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	
 	environment {
-		dockerfilePath= "/opt/jenkins1/"
+		dockerfilePath= "/opt/jenkins/"
 		registry = "legos60007/app_for_demo:v1"
 		registryCredential = 'dockerhub'
 	}
