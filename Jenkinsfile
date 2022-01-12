@@ -2,8 +2,8 @@ pipeline {
 	agent any
 	
 	environment {
-		dockerfilePath= "/opt/jenkins/"
-		registry = "legos60007/jenkinstest1:v1"
+		dockerfilePath= "/opt/jenkins1/"
+		registry = "legos60007/app_for_demo:v1"
 		registryCredential = 'dockerhub'
 	}
 	stages {
@@ -30,7 +30,7 @@ pipeline {
 		}
 		stage ('Run Docker'){
 			steps{
-				sh 'docker run -d -p 1560:80 ${registry}'
+				sh 'docker run -d -p 25400:80 ${registry}'
 			}
 		}
 	}
